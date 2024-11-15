@@ -34,6 +34,7 @@ const Sidebar = () => {
       <div className="flex flex-col gap-6 mt-12">
         {PAGES.map((page, idx) => (
           <Link
+            key={idx}
             className={cn(
               buttonVariants({ variant: "default" }),
               "capitalize items-center justify-start h-12",

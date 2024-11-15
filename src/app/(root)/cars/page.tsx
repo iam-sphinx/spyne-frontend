@@ -121,7 +121,7 @@ const Products = () => {
               <CarInfoCard key={idx} {...result} />
             ))
           : data && Array.isArray(data)
-          ? data.map((result, key) => <CarInfoCard {...result} />)
+          ? data.map((result, idx) => <CarInfoCard key={idx} {...result} />)
           : null}
       </div>
     </main>

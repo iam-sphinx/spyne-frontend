@@ -162,7 +162,11 @@ const Create = () => {
                   </FormControl>
                   <SelectContent>
                     {CURRENCIES.map((currency, idx) => (
-                      <SelectItem value={currency.value} className="capitalize">
+                      <SelectItem
+                        key={idx}
+                        value={currency.value}
+                        className="capitalize"
+                      >
                         {currency.label}
                       </SelectItem>
                     ))}
