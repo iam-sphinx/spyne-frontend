@@ -15,7 +15,7 @@ const useDeleteCar = () => {
     },
     onSuccess: () => {
       toast.success("successfully deleted car.");
-      router.refresh();
+      router.push('/cars');
     },
     onError: (err: any) => {
       toast.error(err.message || "something went wrong");

@@ -102,8 +102,8 @@ const ViewPage = () => {
 
           <Button
             onClick={() => deleteCar({ id: id as string })}
-            isLoading={isCarDataPending}
-            disabled={isCarDataPending}
+            isLoading={isDeleteCarPending}
+            disabled={isDeleteCarPending}
             className="mt-auto"
             variant="destructive"
           >
