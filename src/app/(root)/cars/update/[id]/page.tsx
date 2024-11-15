@@ -120,13 +120,8 @@ const UpdatePage = () => {
       return data;
     },
     onSuccess: (data) => {
-      form.reset({
-        ...data,
-        year: new Date(data?.year),
-        tags: data?.tags.join(","),
-        price: data?.price?.toString(),
-      });
       toast.success("successfully updated car");
+      router.push(`/cars/view/${data?._id}`)
     },
     onError: (err: any) => {
       toast.error(err?.message || "something went wrong");
