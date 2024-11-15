@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 import "./globals.css";
 import Progress from "@/components/ui/elements/progress";
 import { UserProvider } from "@/contexts/userContext";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <UserProvider>
           <QueryProvider>
-            {children}
+            <Suspense>{children}</Suspense>
             <Toaster richColors />
             <Progress />
           </QueryProvider>
